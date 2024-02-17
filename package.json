@@ -2,14 +2,17 @@
   "name": "react-native-underline-text",
   "version": "0.1.0",
   "description": "React Native's Text with custom underline",
-  "main": "lib/commonjs/index",
-  "module": "lib/module/index",
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
   "types": "lib/typescript/src/index.d.ts",
-  "react-native": "src/index",
-  "source": "src/index",
+  "react-native": "src/index.tsx",
+  "source": "src/index.tsx",
   "files": [
     "src",
     "lib",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
     "android",
     "ios",
     "cpp",
@@ -20,9 +23,6 @@
     "!android/gradlew",
     "!android/gradlew.bat",
     "!android/local.properties",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__",
     "!**/.*"
   ],
   "scripts": {
@@ -41,14 +41,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vladhrytsenko/react-native-underline-text/react-native-underline-text.git"
+    "url": "https://github.com/vladhrytsenko/react-native-underline-text.git"
   },
-  "author": "Vlad Hrytsenko <vladhrytsenko115@gmail.com> (https://github.com/vladhrytsenko/react-native-underline-text)",
+  "author": "Vlad Hrytsenko <vladhrytsenko115@gmail.com> (https://github.com/vladhrytsenko)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vladhrytsenko/react-native-underline-text/react-native-underline-text/issues"
+    "url": "https://github.com/vladhrytsenko/react-native-underline-text/issues"
   },
-  "homepage": "https://github.com/vladhrytsenko/react-native-underline-text/react-native-underline-text#readme",
+  "homepage": "https://github.com/vladhrytsenko/react-native-underline-text#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -68,7 +68,7 @@
     "prettier": "^3.0.3",
     "react": "18.2.0",
     "react-native": "0.73.4",
-    "react-native-builder-bob": "^0.20.0",
+    "react-native-builder-bob": "^0.23.2",
     "release-it": "^15.0.0",
     "typescript": "^5.2.2"
   },
@@ -148,12 +148,10 @@
     "targets": [
       "commonjs",
       "module",
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
-        }
-      ]
+      "typescript"
     ]
+  },
+  "directories": {
+    "example": "example"
   }
 }
