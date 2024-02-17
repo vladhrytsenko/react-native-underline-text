@@ -1,3 +1,5 @@
-export function multiply(a: number, b: number): Promise<number> {
-  return Promise.resolve(a * b);
-}
+import Text from './RNTextUnderline/RNTextUnderline';
+
+export default Text;
+export { default as Text } from './RNTextUnderline/RNTextUnderline';
+export * from './RNTextUnderline/RNTextUnderline';
